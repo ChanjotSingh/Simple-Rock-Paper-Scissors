@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+
+  <link rel="stylesheet" href="../styles/10-rockpaperscissor.css">
+
+</head>
+<body> 
+
+  <h1 class="title">Rock Paper Scissor</h1> 
+
+  <button class="move-button" onclick="
+    const computerMove = computerChoice(); 
+    let playerMove = 'Rock';
+    playGame(playerMove, computerMove);
+    updateScore();
+    updateMoves(playerMove, computerMove);
+    updateresult(result);
+    "><img src="../images/rock-emoji.png" class="move-icon"></button>
+
+  <button class="move-button" onclick="
+    const computerMove = computerChoice(); 
+    let playerMove = 'Paper';
+    playGame(playerMove, computerMove);
+    updateScore();
+    updateMoves(playerMove, computerMove);
+    updateresult(result);
+    "><img src="../images/paper-emoji.png" class="move-icon"></button>
+
+  <button class="move-button" onclick="
+    const computerMove = computerChoice(); 
+    let playerMove = 'Scissor';
+    playGame(playerMove, computerMove);
+    updateScore();
+    updateMoves(playerMove, computerMove);
+    updateresult(result);
+    "><img src="../images/scissor-emoji.png" class="move-icon"></button>
+
+    <p class ='js-result result'></p>
+    <p class ='js-moves' class="move-icon"></p>
+    <p class="js-score" class="score"></p>
+
+    <button class='reset-score-button' onclick="
+    scores.Losses= 0;
+    scores.Wins = 0;
+    scores.Ties = 0;
+    localStorage.removeItem('score');
+    updateScore();
+    alert('Scores have been reset')">Reset Scores</button>
+
+  <script src="../scripts/10-rockpaperscissor.js"></script>  
+  </script>
+</body>
+</html>
