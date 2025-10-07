@@ -13,7 +13,7 @@
     }
 
     function updateMoves(playerMove = '', computerMove = ''){
-      document.querySelector('.js-moves').innerHTML = `you <img src="../images/${playerMove.toLowerCase()}-emoji.png" class="move-icon"> Computer <img src="../images/${computerMove.toLowerCase()}-emoji.png" class="move-icon">`;
+      document.querySelector('.js-moves').innerHTML = `you <img src="{playerMove.toLowerCase()}-emoji.png" class="move-icon"> Computer <img src="../images/${computerMove.toLowerCase()}-emoji.png" class="move-icon">`;
     }
 
     function computerChoice(){
@@ -77,3 +77,4 @@
       updateMoves();
       updateresult();
       
+
